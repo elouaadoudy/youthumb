@@ -29,7 +29,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
 
-          <!-- Add the provided text below this line -->
+          {/* Add the provided text below this line */}
           <div>
             <h1>YouTube Thumbnail Downloader</h1>
             <p><strong>Save YT Video Thumbnails:</strong> Get free thumbnail images of any YouTube videos in various resolutions, including Full HD (1080), HD (720), SD, and smaller sizes. Supported video formats include YouTube (HD, HQ, 1080p, 4K) videos.</p>
