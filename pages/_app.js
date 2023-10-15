@@ -1,9 +1,19 @@
 import "../styles/index.css";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { DefaultSeo } from "next-seo";
-
+import ReactGA from 'react-ga'; // Import react-ga
 
 function MyApp({ Component, pageProps }) {
+  // Initialize Google Analytics
+  useEffect(() => {
+    ReactGA.initialize('G-P54R920DWK'); // Replace 'YOUR_TRACKING_ID' with your actual tracking ID
+  }, []);
+
+  // Track page views when the route changes
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, [Component]);
+
   return (
     <Fragment>
       <DefaultSeo

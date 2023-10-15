@@ -1,6 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import GoogleAnalytics from '@/components/GoogleAnalytics';
-
 
 class MyDocument extends Document {
   render() {
@@ -28,8 +26,6 @@ class MyDocument extends Document {
               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
       </Head>
-          <GoogleAnalytics GA_MEASUREMENT_ID='G-P54R920DWK'/>
-
         <body>
           <Main />
           <NextScript />
