@@ -23,10 +23,31 @@ class MyDocument extends Document {
             href="/favicon/favicon-16x16.png"
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-      </Head>
+          {G-P54R920DWK}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-P54R920DWK`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag() {
+                dataLayer.push(arguments);
+              }
+              gtag('js', new Date());
+              gtag('config', 'YOUR_TRACKING_ID');
+            `,
+            }}
+          />
+        </Head>
         <body>
+          <Main />
+          <NextScript />
+          <div style={{ textAlign: 'center', padding: '10px', backgroundColor: 'lightgray' }}>
+            {
+              <body>
           <Main />
           <NextScript />
           <div style={{ textAlign: 'center', padding: '10px', backgroundColor: 'lightgray' }}>
@@ -53,6 +74,9 @@ class MyDocument extends Document {
 
     <h2>Is reusing YouTube thumbnails SEO friendly?</h2>
     <p>No, it's not. In short, it's not SEO friendly because almost all thumbnails on YouTube are indexed by Google. So which one is unique and which one is duplicate, Google knows it. So it's not SEO friendly as you know. But you can do some stuff on that thumbnail, I mean getting some unique effects using Photoshop or any other software that can make your thumbnail unique again, so it can be reused and made SEO friendly again.</p></p>
+          </div>
+        </body>
+            }
           </div>
         </body>
       </Html>
