@@ -18,16 +18,22 @@ function MyApp({ Component, pageProps }) {
         }}
       />
 
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P54R920DWK"></script>
-<script>
+<script 
+    strategy="afterInteractive"
+    src="https://www.googletagmanager.com/gtag/js?id=G-P54R920DWK                                                                                                                           
+/>
+
+<scritp id="google-analytics" strategy="afterInteractive" >
+{
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-P54R920DWK');
-</script>
+}
+</scritp>
+
       <Component {...pageProps} />
+ 
     </Fragment>
   );
 }
