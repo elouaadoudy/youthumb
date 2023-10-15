@@ -23,14 +23,15 @@ function MyApp({ Component, pageProps }) {
     src="https://www.googletagmanager.com/gtag/js?id=G-P54R920DWK                                                                                                                           
 />
 
-<scritp id="google-analytics" strategy="afterInteractive" >
-{
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P54R920DWK"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'G-P54R920DWK');
-}
-</scritp>
+</script>
 
       <Component {...pageProps} />
  
