@@ -1,34 +1,18 @@
 import "../styles/index.css";
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import { DefaultSeo } from "next-seo";
+import { useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 function MyApp({ Component, pageProps }) {
+  // Initialize Google Analytics with your tracking ID
   useEffect(() => {
-    // Initialize Google Analytics
-    ReactGA.initialize('G-P54R920DWK', {
-      debug: process.env.NODE_ENV === 'development', // Enable debug mode in development
-    });
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.initialize('G-P54R920DWK');
   }, []);
 
+  // Track page views on route changes
   useEffect(() => {
-    // Track page views when the route changes
-    const handleRouteChange = (url) => {
-      ReactGA.pageview(url);
-    };
-
-    // Listen for route changes and call the handler
-    if (typeof window !== 'undefined') {
-      window.addEventListener('routeChangeComplete', handleRouteChange);
-    }
-
-    return () => {
-      // Clean up the event listener
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('routeChangeComplete', handleRouteChange);
-      }
-    };
+    ReactGA.pageview(window.location.pathname);
   }, []);
 
   return (
